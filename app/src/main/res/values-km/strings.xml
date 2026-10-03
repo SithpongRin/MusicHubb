@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MusicHub</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">ទំព័រដើម</string>
+    <string name="nav_search">ស្វែងរក</string>
+    <string name="nav_add">បន្ថែម</string>
+    <string name="nav_library">បណ្ណាល័យ</string>
+    <string name="nav_settings">ការកំណត់</string>
+
+    <!-- Home -->
+    <string name="greeting_morning">អរុណសួស្តី</string>
+    <string name="greeting_afternoon">ទិវាសួស្តី</string>
+    <string name="greeting_evening">សាយ័ណ្ហសួស្តី</string>
+    <string name="action_shuffle_all">ចាក់ចម្រុះទាំងអស់</string>
+    <string name="section_continue_listening">បន្តការស្តាប់</string>
+    <string name="section_recently_downloaded">ទាញយកថ្មីៗ</string>
+    <string name="section_favorites">បទពេញចិត្ត</string>
+    <string name="action_see_all">មើលទាំងអស់</string>
+    <string name="home_empty_title">មិនទាន់មានមេឌៀនៅឡើយទេ</string>
+    <string name="home_empty_desc">ទាញយកតន្ត្រី ឬវីដេអូដើម្បីចាប់ផ្តើមស្តាប់ក្រៅបណ្តាញ។</string>
+    <string name="action_go_download">ទាញយកមេឌៀ</string>
+
+    <!-- Download Screen -->
+    <string name="download_screen_title">ទាញយកមេឌៀ</string>
+    <string name="url_input_hint">បិទភ្ជាប់តំណ ឬវាយបញ្ចូល URL</string>
+    <string name="action_paste">បិទភ្ជាប់</string>
+    <string name="action_use_copied">ប្រើតំណដែលបានចម្លង</string>
+    <string name="action_fetch_metadata">ទាញយកព័ត៌មាន</string>
+    <string name="fetching_metadata">កំពុងទាញយកព័ត៌មានមេឌៀ...</string>
+    <string name="metadata_failed">មិនអាចទាញយកព័ត៌មានមេឌៀបានទេ។ សូមពិនិត្យតំណ URL។</string>
+    <string name="label_title">ចំណងជើង</string>
+    <string name="label_artist">សិល្បករ / ឆានែល</string>
+    <string name="label_duration">រយៈពេល</string>
+    <string name="label_format">ទម្រង់</string>
+    <string name="format_audio">សំឡេង (MP3)</string>
+    <string name="format_video">វីដេអូ (MP4)</string>
+    <string name="label_quality">គុណភាព</string>
+    <string name="quality_128">128 kbps</string>
+    <string name="quality_192">192 kbps</string>
+    <string name="quality_320">320 kbps</string>
+    <string name="quality_360p">360p</string>
+    <string name="quality_720p">720p HD</string>
+    <string name="quality_1080p">1080p FHD</string>
+    <string name="label_target_playlist">បញ្ជីចាក់គោលដៅ (ជម្រើស)</string>
+    <string name="playlist_none">គ្មាន</string>
+    <string name="label_estimated_size">ទំហំប្រមាណ៖ %s</string>
+    <string name="action_start_download">ចាប់ផ្តើមទាញយក</string>
+    <string name="playlist_detected">បានរកឃើញបញ្ជីចាក់</string>
+    <string name="action_select_all">ជ្រើសទាំងអស់</string>
+    <string name="action_deselect_all">ដោះជម្រើសទាំងអស់</string>
+    <string name="selected_items_count">បានជ្រើស %1$d នៃ %2$d</string>
+    <string name="tab_new_download">ទាញយកថ្មី</string>
+    <string name="tab_queue">ជួរទាញយក</string>
+    <string name="queue_empty">មិនមានការទាញយកក្នុងជួរទេ</string>
+    <string name="status_queued">ក្នុងជួរ</string>
+    <string name="status_downloading">កំពុងទាញយក</string>
+    <string name="status_paused">បានផ្អាក</string>
+    <string name="status_completed">បានបញ្ចប់</string>
+    <string name="status_failed">បរាជ័យ</string>
+    <string name="status_cancelled">បានបោះបង់</string>
+    <string name="action_cancel">បោះបង់</string>
+    <string name="action_retry">ព្យាយាមម្តងទៀត</string>
+    <string name="action_pause">ផ្អាក</string>
+    <string name="action_resume">បន្ត</string>
+    <string name="action_clear_completed">សម្អាតដែលបានបញ្ចប់</string>
+    <string name="download_duplicate_message">មេឌៀនេះត្រូវបានទាញយករួចហើយ ឬកំពុងស្ថិតក្នុងជួរ។</string>
+    <string name="download_started">បានបន្ថែមការទាញយកទៅក្នុងជួរ។</string>
+    <string name="download_speed_format">%s/វិ</string>
+
+    <!-- Library -->
+    <string name="tab_all_songs">បទចម្រៀងទាំងអស់</string>
+    <string name="tab_playlists">បញ្ជីចាក់</string>
+    <string name="tab_favorites">ពេញចិត្ត</string>
+    <string name="tab_videos">វីដេអូ</string>
+    <string name="tab_downloads">ការទាញយក</string>
+    <string name="sort_by">តម្រៀបតាម</string>
+    <string name="sort_name">ឈ្មោះ</string>
+    <string name="sort_date">កាលបរិច្ឆេទបន្ថែម</string>
+    <string name="sort_duration">រយៈពេល</string>
+    <string name="sort_ascending">ឡើងលើ</string>
+    <string name="sort_descending">ចុះក្រោម</string>
+    <string name="library_songs_empty">រកមិនឃើញបទចម្រៀងទេ</string>
+    <string name="library_playlists_empty">មិនទាន់មានបញ្ជីចាក់នៅឡើយទេ</string>
+    <string name="library_favorites_empty">មិនទាន់មានបទពេញចិត្តនៅឡើយទេ</string>
+    <string name="library_videos_empty">មិនមានវីដេអូដែលបានទាញយកទេ</string>
+    <string name="action_create_playlist">បង្កើតបញ្ជីចាក់</string>
+    <string name="dialog_create_playlist_title">បញ្ជីចាក់ថ្មី</string>
+    <string name="dialog_playlist_name_hint">ឈ្មោះបញ្ជីចាក់</string>
+    <string name="action_create">បង្កើត</string>
+    <string name="action_delete">លុប</string>
+    <string name="action_rename">ប្តូរឈ្មោះ</string>
+    <string name="action_play">ចាក់</string>
+    <string name="action_shuffle">ចាក់ចម្រុះ</string>
+    <string name="action_add_to_playlist">បន្ថែមទៅបញ្ជីចាក់</string>
+    <string name="action_remove_from_playlist">លុបចេញពីបញ្ជីចាក់</string>
+    <string name="song_removed_from_playlist">បានលុបបទចម្រៀងចេញពីបញ្ជីចាក់</string>
+    <string name="action_undo">ត្រឡប់វិញ</string>
+    <string name="search_in_playlist_hint">ស្វែងរកក្នុងបញ្ជីចាក់</string>
+    <string name="songs_count">%d បទ</string>
+    <string name="one_song_count">1 បទ</string>
+    <string name="items_selected_count">បានជ្រើស %d</string>
+    <string name="action_delete_selected">លុបដែលបានជ្រើស</string>
+
+    <!-- Search -->
+    <string name="search_hint">ស្វែងរកបទចម្រៀង សិល្បករ ឬតំណ</string>
+    <string name="mode_on_device">ក្នុងឧបករណ៍</string>
+    <string name="mode_online">អនឡាញ</string>
+    <string name="recent_searches">ការស្វែងរកថ្មីៗ</string>
+    <string name="action_clear_history">សម្អាតប្រវត្តិ</string>
+    <string name="search_no_results">រកមិនឃើញលទ្ធផលស្វែងរកទេ</string>
+    <string name="search_online_disclaimer">ស្វែងរកតាមរយៈប្រភពសាធារណៈដែលគាំទ្រ។</string>
+    <string name="searching_indicator">កំពុងស្វែងរក...</string>
+
+    <!-- Player -->
+    <string name="player_now_playing">កំពុងចាក់</string>
+    <string name="player_queue">ជួរចាក់</string>
+    <string name="player_speed">ល្បឿនចាក់</string>
+    <string name="player_sleep_timer">កំណត់ពេលបិទ</string>
+    <string name="timer_off">បិទ</string>
+    <string name="timer_15">15 នាទី</string>
+    <string name="timer_30">30 នាទី</string>
+    <string name="timer_45">45 នាទី</string>
+    <string name="timer_60">60 នាទី</string>
+    <string name="timer_end_of_track">ចប់បទនេះ</string>
+    <string name="sleep_timer_set_toast">បានកំណត់ពេលបិទ</string>
+    <string name="action_favorite">ពេញចិត្ត</string>
+    <string name="action_unfavorite">ដកចេញពីពេញចិត្ត</string>
+    <string name="repeat_off">មិនចាក់ឡើងវិញ</string>
+    <string name="repeat_all">ចាក់ឡើងវិញទាំងអស់</string>
+    <string name="repeat_one">ចាក់ឡើងវិញមួយបទ</string>
+    <string name="video_presentation">របៀបវីដេអូ</string>
+    <string name="audio_presentation">របៀបសំឡេង</string>
+
+    <!-- Settings -->
+    <string name="settings_title">ការកំណត់</string>
+    <string name="settings_section_download">ការទាញយក</string>
+    <string name="pref_default_format">ទម្រង់លំនាំដើម</string>
+    <string name="pref_default_quality">គុណភាពលំនាំដើម</string>
+    <string name="pref_wifi_only">ទាញយកតាម Wi-Fi តែប៉ុណ្ណោះ</string>
+    <string name="pref_concurrent_downloads">ការទាញយកដំណាលគ្នា</string>
+    <string name="pref_storage_location">ទីតាំងផ្ទុក</string>
+    <string name="storage_app_specific">ទំហំផ្ទុកក្នុងកម្មវិធី</string>
+    <string name="settings_section_playback">ការចាក់មេឌៀ</string>
+    <string name="pref_audio_focus">ការគ្រប់គ្រងសំឡេងប្រព័ន្ធ</string>
+    <string name="pref_gapless">ការចាក់ដោយគ្មានគម្លាត</string>
+    <string name="pref_default_speed">ល្បឿនចាក់លំនាំដើម</string>
+    <string name="settings_section_appearance">រូបរាង</string>
+    <string name="pref_theme">ស្បែក</string>
+    <string name="theme_system">តាមប្រព័ន្ធ</string>
+    <string name="theme_light">ភ្លឺ</string>
+    <string name="theme_dark">ងងឹត</string>
+    <string name="pref_language">ភាសា</string>
+    <string name="lang_khmer">ភាសាខ្មែរ</string>
+    <string name="lang_english">English</string>
+    <string name="settings_section_storage">ការប្រើប្រាស់ទំហំផ្ទុក</string>
+    <string name="storage_audio_usage">ឯកសារសំឡេង៖ %s</string>
+    <string name="storage_video_usage">ឯកសារវីដេអូ៖ %s</string>
+    <string name="storage_cache_usage">ទំហំឃ្លាំងសម្ងាត់៖ %s</string>
+    <string name="action_clear_cache">សម្អាតឃ្លាំងសម្ងាត់</string>
+    <string name="cache_cleared_toast">បានសម្អាតឃ្លាំងសម្ងាត់រួចរាល់</string>
+    <string name="settings_section_updates">ការអាប់ដេត</string>
+    <string name="label_installed_version">កំណែដែលបានដំឡើង៖ %s</string>
+    <string name="action_check_updates">ពិនិត្យមើលការអាប់ដេត</string>
+    <string name="pref_auto_check_updates">ពិនិត្យការអាប់ដេតដោយស្វ័យប្រវត្តិ</string>
+    <string name="action_update_engine">អាប់ដេតម៉ាស៊ីនទាញយក</string>
+    <string name="engine_updating">កំពុងអាប់ដេតម៉ាស៊ីនទាញយក...</string>
+    <string name="engine_update_success">ម៉ាស៊ីនទាញយកត្រូវបានអាប់ដេតជោគជ័យ។</string>
+    <string name="engine_update_failed">ម៉ាស៊ីនទាញយកជាកំណែចុងក្រោយរួចហើយ ឬមិនអាចអាប់ដេតបានទេ។</string>
+    <string name="settings_section_about">អំពីកម្មវិធី</string>
+    <string name="about_version">MusicHub កំណែ %s</string>
+    <string name="about_disclaimer_title">លក្ខខណ្ឌវេទិកា និងការមិនទទួលខុសត្រូវលើការរក្សាសិទ្ធិ</string>
+    <string name="about_disclaimer_content">MusicHub គឺជាកម្មវិធីគ្រប់គ្រងមេឌៀផ្ទាល់ខ្លួន និងចាក់ក្រៅបណ្តាញ។ សូមចូលប្រើប្រាស់ និងទាញយកតែមាតិកាណាដែលអ្នកមានសិទ្ធិស្របច្បាប់ ឬផ្តល់ជូនក្រោមអាជ្ញាបណ្ណបើកចំហប៉ុណ្ណោះ។ សូមគោរពម្ចាស់កម្មសិទ្ធិបញ្ញា និងលក្ខខណ្ឌវេទិកា។</string>
+    <string name="about_licenses">អាជ្ញាបណ្ណកូដចំហ</string>
+
+    <!-- In-App Updater -->
+    <string name="update_dialog_title">មានកំណែអាប់ដេតថ្មី</string>
+    <string name="update_dialog_msg">MusicHub កំណែថ្មី (%s) អាចទាញយកបានហើយ។</string>
+    <string name="update_dialog_changelog">កំណត់ហេតុប្តូរថ្មី៖</string>
+    <string name="action_update_now">អាប់ដេតឥឡូវនេះ</string>
+    <string name="action_later">ពេលក្រោយ</string>
+    <string name="updating_download_progress">កំពុងទាញយកការអាប់ដេត៖ %1$s / %2$s (%3$d%%)</string>
+    <string name="verifying_sha256">កំពុងផ្ទៀងផ្ទាត់លេខកូដសម្ងាត់ SHA-256...</string>
+    <string name="sha256_verification_failed">ការផ្ទៀងផ្ទាត់មិនជោគជ័យ៖ លេខកូដ SHA-256 មិនត្រូវគ្នា។</string>
+    <string name="action_install">ដំឡើង</string>
+    <string name="install_permission_title">ត្រូវការការអនុញ្ញាតដំឡើង</string>
+    <string name="install_permission_msg">សូមផ្តល់ការអនុញ្ញាតដំឡើងកញ្ចប់ APK ពីកម្មវិធីនេះនៅក្នុងការកំណត់ប្រព័ន្ធ។</string>
+    <string name="action_open_settings">បើកការកំណត់</string>
+    <string name="update_up_to_date">MusicHub ជាកំណែចុងក្រោយបំផុតហើយ។</string>
+    <string name="update_check_failed">មិនអាចពិនិត្យការអាប់ដេតបានទេ។ សូមពិនិត្យការតភ្ជាប់អ៊ីនធឺណិត។</string>
+    <string name="update_required_title">ទាមទារការអាប់ដេត</string>
+    <string name="update_required_msg">កំណែដែលបានដំឡើងទាបជាងកំណែអប្បបរមាដែលគាំទ្រ។ សូមអាប់ដេតដើម្បីបន្តប្រើប្រាស់ MusicHub។</string>
+
+    <!-- Notifications -->
+    <string name="channel_playback">ការចាក់មេឌៀ MusicHub</string>
+    <string name="channel_playback_desc">បង្ហាញប៊ូតុងបញ្ជា និងព័ត៌មានមេឌៀដែលកំពុងចាក់។</string>
+    <string name="channel_downloads">ការទាញយក MusicHub</string>
+    <string name="channel_downloads_desc">បង្ហាញវឌ្ឍនភាព និងស្ថានភាពទាញយកមេឌៀ។</string>
+    <string name="notification_downloading">កំពុងទាញយក %s</string>
+    <string name="notification_download_complete">បានទាញយកពេញលេញ៖ %s</string>
+    <string name="notification_download_failed">ការទាញយកបរាជ័យ៖ %s</string>
+</resources>

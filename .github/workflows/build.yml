@@ -1,0 +1,192 @@
+name: MusicHub CI-CD
+
+on:
+  push:
+    branches:
+      - main
+      - master
+    tags:
+      - 'v*'
+  pull_request:
+    branches:
+      - main
+      - master
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-test:
+    name: Build & Test
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+          cache: 'gradle'
+
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Grant execute permission for Gradle wrapper
+        run: chmod +x gradlew || true
+
+      - name: Run unit tests
+        run: ./gradlew testDebugUnitTest --no-daemon --stacktrace
+
+      - name: Assemble Debug APK
+        run: ./gradlew assembleDebug --no-daemon --stacktrace
+
+      - name: Upload Debug APK Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: MusicHub-debug
+          path: app/build/outputs/apk/debug/*.apk
+          retention-days: 14
+
+  release:
+    name: Release Signed APK
+    needs: build-and-test
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+          cache: 'gradle'
+
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Validate release secrets
+        run: |
+          if [ -z "${{ secrets.MUSICHUB_KEYSTORE_BASE64 }}" ]; then
+            echo "ERROR: Missing secret MUSICHUB_KEYSTORE_BASE64. Release build aborted." >&2
+            exit 1
+          fi
+          if [ -z "${{ secrets.MUSICHUB_KEYSTORE_PASSWORD }}" ]; then
+            echo "ERROR: Missing secret MUSICHUB_KEYSTORE_PASSWORD. Release build aborted." >&2
+            exit 1
+          fi
+          if [ -z "${{ secrets.MUSICHUB_KEY_ALIAS }}" ]; then
+            echo "ERROR: Missing secret MUSICHUB_KEY_ALIAS. Release build aborted." >&2
+            exit 1
+          fi
+          if [ -z "${{ secrets.MUSICHUB_KEY_PASSWORD }}" ]; then
+            echo "ERROR: Missing secret MUSICHUB_KEY_PASSWORD. Release build aborted." >&2
+            exit 1
+          fi
+          echo "All required release signing secrets are configured."
+
+      - name: Decode signing keystore
+        run: |
+          KEYSTORE_FILE="/tmp/musichub_release.keystore"
+          echo "${{ secrets.MUSICHUB_KEYSTORE_BASE64 }}" | base64 --decode > "$KEYSTORE_FILE"
+          echo "KEYSTORE_PATH=$KEYSTORE_FILE" >> $GITHUB_ENV
+
+      - name: Build Signed Release APK
+        env:
+          KEYSTORE_PATH: /tmp/musichub_release.keystore
+          STORE_PASSWORD: ${{ secrets.MUSICHUB_KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.MUSICHUB_KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.MUSICHUB_KEY_PASSWORD }}
+        run: |
+          chmod +x gradlew || true
+          ./gradlew assembleRelease --no-daemon --stacktrace
+
+      - name: Verify Signed APK and Prepare Assets
+        run: |
+          RELEASE_APK=$(find app/build/outputs/apk/release -name "*.apk" | head -n 1)
+          if [ ! -f "$RELEASE_APK" ]; then
+            echo "ERROR: Release APK was not generated." >&2
+            exit 1
+          fi
+
+          mkdir -p release_assets
+          cp "$RELEASE_APK" release_assets/MusicHub-release.apk
+
+          # Compute SHA-256
+          APK_SHA256=$(sha256sum release_assets/MusicHub-release.apk | awk '{print $1}')
+          echo "APK SHA-256: $APK_SHA256"
+          echo "$APK_SHA256  MusicHub-release.apk" > release_assets/SHA256SUMS.txt
+          echo "APK_SHA256=$APK_SHA256" >> $GITHUB_ENV
+
+          # Tag parsing
+          TAG_NAME="${GITHUB_REF#refs/tags/}"
+          VERSION_NAME="${TAG_NAME#v}"
+          echo "TAG_NAME=$TAG_NAME" >> $GITHUB_ENV
+          echo "VERSION_NAME=$VERSION_NAME" >> $GITHUB_ENV
+
+          # Determine versionCode from Git commit count or date
+          VERSION_CODE=$(git rev-list --count HEAD)
+          echo "VERSION_CODE=$VERSION_CODE" >> $GITHUB_ENV
+
+          # Generate version.json
+          cat <<EOF > release_assets/version.json
+          {
+            "versionCode": $VERSION_CODE,
+            "versionName": "$VERSION_NAME",
+            "apkUrl": "https://github.com/${{ github.repository }}/releases/download/$TAG_NAME/MusicHub-release.apk",
+            "sha256": "$APK_SHA256",
+            "changelog": {
+              "en": [
+                "Updated media download engine",
+                "Performance optimizations and offline playback stability",
+                "Khmer and English localization enhancements"
+              ],
+              "km": [
+                "អាប់ដេតម៉ាស៊ីនទាញយកមេឌៀ",
+                "ការបង្កើនល្បឿន និងស្ថិរភាពនៃការចាក់ក្រៅបណ្តាញ",
+                "ការកែលម្អការបកប្រែជាភាសាខ្មែរ និងអង់គ្លេស"
+              ]
+            },
+            "forceUpdate": false,
+            "minSupportedVersionCode": 1
+          }
+          EOF
+
+      - name: Clean up temporary keystore
+        if: always()
+        run: |
+          rm -f /tmp/musichub_release.keystore
+
+      - name: Create GitHub Release and Upload Assets
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ env.TAG_NAME }}
+          name: MusicHub Release ${{ env.TAG_NAME }}
+          draft: false
+          prerelease: false
+          files: |
+            release_assets/MusicHub-release.apk
+            release_assets/version.json
+            release_assets/SHA256SUMS.txt
+          body: |
+            ## MusicHub Release ${{ env.TAG_NAME }}
+
+            ### Checksum (SHA-256)
+            \`\`\`
+            ${{ env.APK_SHA256 }}  MusicHub-release.apk
+            \`\`\`
+
+            ### Changelog
+            - Improved download reliability and error recovery
+            - Background playback and lock screen controls optimization
+            - Offline media organization and playlist management
+            - Supported online search and metadata extractor update

@@ -1,0 +1,202 @@
+<resources>
+    <string name="app_name">MusicHub</string>
+
+    <!-- Navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_search">Search</string>
+    <string name="nav_add">Add</string>
+    <string name="nav_library">Library</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Home -->
+    <string name="greeting_morning">Good morning</string>
+    <string name="greeting_afternoon">Good afternoon</string>
+    <string name="greeting_evening">Good evening</string>
+    <string name="action_shuffle_all">Shuffle all</string>
+    <string name="section_continue_listening">Continue listening</string>
+    <string name="section_recently_downloaded">Recently downloaded</string>
+    <string name="section_favorites">Favorites</string>
+    <string name="action_see_all">See all</string>
+    <string name="home_empty_title">No media yet</string>
+    <string name="home_empty_desc">Download music or video to start listening offline.</string>
+    <string name="action_go_download">Download media</string>
+
+    <!-- Download Screen -->
+    <string name="download_screen_title">Download Media</string>
+    <string name="url_input_hint">Paste link or type URL</string>
+    <string name="action_paste">Paste</string>
+    <string name="action_use_copied">Use copied link</string>
+    <string name="action_fetch_metadata">Fetch</string>
+    <string name="fetching_metadata">Fetching media information...</string>
+    <string name="metadata_failed">Unable to retrieve media metadata. Please check the URL.</string>
+    <string name="label_title">Title</string>
+    <string name="label_artist">Artist / Channel</string>
+    <string name="label_duration">Duration</string>
+    <string name="label_format">Format</string>
+    <string name="format_audio">Audio (MP3)</string>
+    <string name="format_video">Video (MP4)</string>
+    <string name="label_quality">Quality</string>
+    <string name="quality_128">128 kbps</string>
+    <string name="quality_192">192 kbps</string>
+    <string name="quality_320">320 kbps</string>
+    <string name="quality_360p">360p</string>
+    <string name="quality_720p">720p HD</string>
+    <string name="quality_1080p">1080p FHD</string>
+    <string name="label_target_playlist">Target Playlist (Optional)</string>
+    <string name="playlist_none">None</string>
+    <string name="label_estimated_size">Estimated size: %s</string>
+    <string name="action_start_download">Start download</string>
+    <string name="playlist_detected">Playlist detected</string>
+    <string name="action_select_all">Select all</string>
+    <string name="action_deselect_all">Deselect all</string>
+    <string name="selected_items_count">%1$d of %2$d selected</string>
+    <string name="tab_new_download">New download</string>
+    <string name="tab_queue">Queue</string>
+    <string name="queue_empty">Download queue is empty</string>
+    <string name="status_queued">Queued</string>
+    <string name="status_downloading">Downloading</string>
+    <string name="status_paused">Paused</string>
+    <string name="status_completed">Completed</string>
+    <string name="status_failed">Failed</string>
+    <string name="status_cancelled">Cancelled</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_retry">Retry</string>
+    <string name="action_pause">Pause</string>
+    <string name="action_resume">Resume</string>
+    <string name="action_clear_completed">Clear completed</string>
+    <string name="download_duplicate_message">This item is already downloaded or in queue.</string>
+    <string name="download_started">Download added to queue.</string>
+    <string name="download_speed_format">%s/s</string>
+
+    <!-- Library -->
+    <string name="tab_all_songs">All songs</string>
+    <string name="tab_playlists">Playlists</string>
+    <string name="tab_favorites">Favorites</string>
+    <string name="tab_videos">Videos</string>
+    <string name="tab_downloads">Downloads</string>
+    <string name="sort_by">Sort by</string>
+    <string name="sort_name">Name</string>
+    <string name="sort_date">Date added</string>
+    <string name="sort_duration">Duration</string>
+    <string name="sort_ascending">Ascending</string>
+    <string name="sort_descending">Descending</string>
+    <string name="library_songs_empty">No songs found</string>
+    <string name="library_playlists_empty">No playlists created yet</string>
+    <string name="library_favorites_empty">No favorite songs marked</string>
+    <string name="library_videos_empty">No downloaded videos</string>
+    <string name="action_create_playlist">Create playlist</string>
+    <string name="dialog_create_playlist_title">New Playlist</string>
+    <string name="dialog_playlist_name_hint">Playlist name</string>
+    <string name="action_create">Create</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_rename">Rename</string>
+    <string name="action_play">Play</string>
+    <string name="action_shuffle">Shuffle</string>
+    <string name="action_add_to_playlist">Add to playlist</string>
+    <string name="action_remove_from_playlist">Remove from playlist</string>
+    <string name="song_removed_from_playlist">Song removed from playlist</string>
+    <string name="action_undo">Undo</string>
+    <string name="search_in_playlist_hint">Search in playlist</string>
+    <string name="songs_count">%d songs</string>
+    <string name="one_song_count">1 song</string>
+    <string name="items_selected_count">%d items selected</string>
+    <string name="action_delete_selected">Delete selected</string>
+
+    <!-- Search -->
+    <string name="search_hint">Search songs, artists, or links</string>
+    <string name="mode_on_device">On device</string>
+    <string name="mode_online">Online</string>
+    <string name="recent_searches">Recent searches</string>
+    <string name="action_clear_history">Clear history</string>
+    <string name="search_no_results">No search results found</string>
+    <string name="search_online_disclaimer">Searching supported public sources.</string>
+    <string name="searching_indicator">Searching...</string>
+
+    <!-- Player -->
+    <string name="player_now_playing">Now Playing</string>
+    <string name="player_queue">Queue</string>
+    <string name="player_speed">Playback Speed</string>
+    <string name="player_sleep_timer">Sleep Timer</string>
+    <string name="timer_off">Off</string>
+    <string name="timer_15">15 minutes</string>
+    <string name="timer_30">30 minutes</string>
+    <string name="timer_45">45 minutes</string>
+    <string name="timer_60">60 minutes</string>
+    <string name="timer_end_of_track">End of track</string>
+    <string name="sleep_timer_set_toast">Sleep timer set</string>
+    <string name="action_favorite">Favorite</string>
+    <string name="action_unfavorite">Unfavorite</string>
+    <string name="repeat_off">Repeat Off</string>
+    <string name="repeat_all">Repeat All</string>
+    <string name="repeat_one">Repeat One</string>
+    <string name="video_presentation">Video Mode</string>
+    <string name="audio_presentation">Audio Mode</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_section_download">Downloads</string>
+    <string name="pref_default_format">Default Format</string>
+    <string name="pref_default_quality">Default Quality</string>
+    <string name="pref_wifi_only">Download on Wi-Fi only</string>
+    <string name="pref_concurrent_downloads">Concurrent Downloads</string>
+    <string name="pref_storage_location">Storage Location</string>
+    <string name="storage_app_specific">App internal storage</string>
+    <string name="settings_section_playback">Playback</string>
+    <string name="pref_audio_focus">Audio focus handling</string>
+    <string name="pref_gapless">Gapless playback</string>
+    <string name="pref_default_speed">Default playback speed</string>
+    <string name="settings_section_appearance">Appearance</string>
+    <string name="pref_theme">Theme</string>
+    <string name="theme_system">System Default</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="pref_language">Language</string>
+    <string name="lang_khmer">Khmer (ភាសាខ្មែរ)</string>
+    <string name="lang_english">English</string>
+    <string name="settings_section_storage">Storage Usage</string>
+    <string name="storage_audio_usage">Audio files: %s</string>
+    <string name="storage_video_usage">Video files: %s</string>
+    <string name="storage_cache_usage">Cache size: %s</string>
+    <string name="action_clear_cache">Clear Cache</string>
+    <string name="cache_cleared_toast">Cache cleared</string>
+    <string name="settings_section_updates">Updates</string>
+    <string name="label_installed_version">Installed version: %s</string>
+    <string name="action_check_updates">Check for updates</string>
+    <string name="pref_auto_check_updates">Auto-check for updates</string>
+    <string name="action_update_engine">Update extraction engine</string>
+    <string name="engine_updating">Updating extraction engine...</string>
+    <string name="engine_update_success">Extraction engine updated successfully.</string>
+    <string name="engine_update_failed">Extraction engine is up to date or update unavailable.</string>
+    <string name="settings_section_about">About</string>
+    <string name="about_version">MusicHub version %s</string>
+    <string name="about_disclaimer_title">Platform terms and copyright disclaimer</string>
+    <string name="about_disclaimer_content">MusicHub is a personal media organizer and offline player. Only access and download content that you have legitimate rights to or that is provided under appropriate open licenses. Respect content creators and platform terms.</string>
+    <string name="about_licenses">Open-source licenses</string>
+
+    <!-- In-App Updater -->
+    <string name="update_dialog_title">Update Available</string>
+    <string name="update_dialog_msg">A new version of MusicHub (%s) is available.</string>
+    <string name="update_dialog_changelog">Changelog:</string>
+    <string name="action_update_now">Update Now</string>
+    <string name="action_later">Later</string>
+    <string name="updating_download_progress">Downloading update: %1$s / %2$s (%3$d%%)</string>
+    <string name="verifying_sha256">Verifying release checksum...</string>
+    <string name="sha256_verification_failed">Release verification failed: SHA-256 checksum mismatch.</string>
+    <string name="action_install">Install</string>
+    <string name="install_permission_title">Install permission needed</string>
+    <string name="install_permission_msg">Please grant permission to install APK updates from this app in system settings.</string>
+    <string name="action_open_settings">Open Settings</string>
+    <string name="update_up_to_date">MusicHub is up to date.</string>
+    <string name="update_check_failed">Unable to check for updates. Please check your network connection.</string>
+    <string name="update_required_title">Update Required</string>
+    <string name="update_required_msg">Your installed version is below the minimum supported version. Please update to continue using MusicHub.</string>
+
+    <!-- Notifications -->
+    <string name="channel_playback">MusicHub Playback</string>
+    <string name="channel_playback_desc">Shows playback controls and current media information.</string>
+    <string name="channel_downloads">MusicHub Downloads</string>
+    <string name="channel_downloads_desc">Shows media download progress and status.</string>
+    <string name="notification_downloading">Downloading %s</string>
+    <string name="notification_download_complete">Download complete: %s</string>
+    <string name="notification_download_failed">Download failed: %s</string>
+</resources>

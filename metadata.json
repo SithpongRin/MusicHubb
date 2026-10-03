@@ -1,0 +1,6 @@
+{
+  "name": "MusicHub",
+  "description": "Standalone native media downloader, organizer, and offline player",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
